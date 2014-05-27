@@ -190,7 +190,7 @@
     NSInteger remaining = intX % self.clipInterval;
     NSInteger fullClipsNumber = (intX - remaining) / self.clipInterval;
     
-    if ((remaining - self.clipInterval/2) > 0)
+    if ((remaining - (1 - self.clipInterval * self.intervalValue)) > 0)
     {
         fullClipsNumber ++; // rounded correction
     }
